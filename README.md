@@ -17,4 +17,4 @@ craw4u.Get("https://github.com/YanHerChen/craw4u")
 
 ## Changelog
 
-[Changelog]()
+[Changelog](https://github.com/dannypsnl/craw4u/blob/dev/CHANGELOG.md)
