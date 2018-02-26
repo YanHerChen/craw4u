@@ -14,6 +14,7 @@ type Result struct {
 
 // Get return response from url
 func Get(url string) *Result {
+	// TODO: Allow parameters
 	return Request("GET", url)
 }
 
