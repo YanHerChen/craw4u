@@ -14,7 +14,16 @@ type Result struct {
 
 // Get return response from url
 func Get(url string) *Result {
-	r, e := http.Get(url)
+	// TODO: Allow parameters
+	return Request("GET", url)
+}
+
+// Request handle any kind of request
+func Request(method, url string) *Result {
+	// send nil show that we don't need io.Reader
+	req, e := http.NewRequest(method, url, nil)
+	c := &http.Client{}
+	r, e := c.Do(req)
 	return &Result{
 		StatusCode: r.StatusCode,
 		Err:        e,
